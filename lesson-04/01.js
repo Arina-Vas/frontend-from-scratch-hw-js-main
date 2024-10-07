@@ -23,3 +23,4 @@ function includesElement(array, element) {
     }
 }
 console.log(includesElement([1, 2, 3], 2));
+console.log(includesElement([1, 5, 3,9], 2));
