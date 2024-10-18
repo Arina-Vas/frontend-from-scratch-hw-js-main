@@ -31,7 +31,7 @@ btnPrev.addEventListener('click', function () {
   const img = document.querySelector("#web-tech-image");
   // let src = img.getAttribute('src');
   for (let i = 0; i <= WEB_TECH_IMAGES.length; i++) {
-    src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
+    // let src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
     img.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
     // img.setAttribute('src', src);
   }
