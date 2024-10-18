@@ -27,12 +27,12 @@ console.log(btnNext);
 const img = document.querySelector("#web-tech-image");
 console.log(img.src);
 
-// btnPrev.addEventListener('click', function () {
-//   const img = document.querySelector("#web-tech-image");
-//   let src = img.getAttribute('src');
-//   for (let i = 0; i <= WEB_TECH_IMAGES.length; i++) {
-//     src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
-//     img.src.innerHTML = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
-//     // img.setAttribute('src', src);
-//   }
-// })
+btnPrev.addEventListener('click', function () {
+  const img = document.querySelector("#web-tech-image");
+  // let src = img.getAttribute('src');
+  for (let i = 0; i <= WEB_TECH_IMAGES.length; i++) {
+    src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
+    img.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
+    // img.setAttribute('src', src);
+  }
+})
