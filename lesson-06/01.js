@@ -26,8 +26,8 @@ console.log(btnNext);
 
 btnPrev.addEventListener('click', function () {
   const img = document.querySelector("#web-tech-image");
-  const src = img.getAttribute('src');
+  let src = img.getAttribute('src');
   for (let i = 0; i <= WEB_TECH_IMAGES.length; i++) {
-    src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i]
+    src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
   }
 })
