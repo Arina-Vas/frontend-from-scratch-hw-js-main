@@ -24,15 +24,47 @@ console.log(btnPrev);
 const btnNext = document.querySelector("#next-button");
 console.log(btnNext);
 
-const img = document.querySelector("#web-tech-image");
-console.log(img.src);
 
 btnPrev.addEventListener('click', function () {
   const img = document.querySelector("#web-tech-image");
-  // let src = img.getAttribute('src');
-  for (let i = 0; i <= WEB_TECH_IMAGES.length; i++) {
-    // let src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
-    img.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
-    // img.setAttribute('src', src);
+  if (img.src === WEB_TECH_IMAGES[0]) {
+    img.setAttribute('src', `${WEB_TECH_IMAGES[2]}`)
   }
-})
+  else if (img.src === WEB_TECH_IMAGES[1]) {
+    img.setAttribute('src', `${WEB_TECH_IMAGES[0]}`)
+  }
+  else if (img.src === WEB_TECH_IMAGES[2]) {
+    img.setAttribute('src', `${WEB_TECH_IMAGES[1]}`)
+  }
+}
+)
+
+btnNext.addEventListener('click', function () {
+const img = document.querySelector("#web-tech-image");
+if (img.src === WEB_TECH_IMAGES[0]) {
+  img.setAttribute('src', `${WEB_TECH_IMAGES[1]}`)
+}
+else if (img.src === WEB_TECH_IMAGES[1]) {
+  img.setAttribute('src', `${WEB_TECH_IMAGES[2]}`)
+}
+else if (img.src === WEB_TECH_IMAGES[2]) {
+  img.setAttribute('src', `${WEB_TECH_IMAGES[0]}`)
+}
+}
+)
+
+// btnNext.addEventListener('click', function () {
+//   const img = document.querySelector("#web-tech-image");
+//   for (let i = 1; i < WEB_TECH_IMAGES.length; i++) {
+//     let src = img.getAttribute('src');
+//     let indexElem = WEB_TECH_IMAGES.indexOf(src);
+//     if (indexElem === (WEB_TECH_IMAGES.length - 1)) {
+//       let index = 0;
+//       img.setAttribute('src', `${WEB_TECH_IMAGES[index]}`)
+//     }
+//     else {
+//       let index = indexElem + i;
+//       img.setAttribute('src', `${WEB_TECH_IMAGES[index]}`)
+//     }
+//   }
+// })
