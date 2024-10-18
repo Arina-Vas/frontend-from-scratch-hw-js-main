@@ -26,9 +26,10 @@ console.log(btnNext);
 
 btnPrev.addEventListener('click', function () {
   const img = document.querySelector("#web-tech-image");
-  let src = "";
+  let src = img.getAttribute('src');
   for (let i = 0; i <= WEB_TECH_IMAGES.length; i++) {
     src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
-    img.setAttribute('src', src);
+    src.innerHTML = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - i];
+    // img.setAttribute('src', src);
   }
 })
