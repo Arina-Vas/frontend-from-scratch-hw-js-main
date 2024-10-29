@@ -75,6 +75,7 @@ petShop.addEventListener('click', function (event) {
   }
   if(event.target.classList.contains('pet') && cart.length < 3){
     cart.push(event.target.id)
+    messageBox.textContent = "";
     updateCartDisplay();
   }
 })
