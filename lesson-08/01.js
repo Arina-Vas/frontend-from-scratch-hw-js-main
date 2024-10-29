@@ -74,7 +74,7 @@ petShop.addEventListener('click', function (event) {
     messageBox.textContent = 'Вы не можете добавить более 3 питомцев'
   }
   if(event.target.classList.contains('pet') && cart.length < 3){
-    cart.push(event.target.id)
+    cart.push(event.target.id) //передаем id элемента вызвавшего клик, он потом используется в функц обновления корзины для поиска животного в массиве петс
     messageBox.textContent = "";
     updateCartDisplay();
   }
