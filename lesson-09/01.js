@@ -25,7 +25,7 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 const filter = (array, callback) => {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
-    if (callback(array[i], i)) {
+    if (callback(array[i], i)) {                          // array[i] - текущий элемент массива; i - индекс текущего элемента;
       newArray.push(array[i])
     }
   }
