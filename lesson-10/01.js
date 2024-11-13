@@ -31,7 +31,7 @@ const model = {
   },
   // your code
   deleteMovie(id) {
-    this.movies = this.movies.filter((movie) => movie.id === id)
+    this.movies = this.movies.filter((movie) => movie.id !== id)
     view.renderMovies(this.movies)
   }
 }
@@ -58,7 +58,7 @@ const view = {
     // your code
     list.addEventListener('click', (e) => {
       if(e.target.classList.contains('delete-button')) {
-        const id = parseInt(e.target.parentElement.id, 10)
+        const id = +e.target.parentElement.id
         controller.deleteMovie(id);
       }
       
